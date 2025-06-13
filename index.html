@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <h2>欢迎使用 Telegram 小程序</h2>
+  <button onclick="send()">点击发送数据</button>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.ready(); // 初始化
+    tg.expand(); // 展开页面
+
+    function send() {
+      tg.sendData("你点击了按钮！");
+      tg.close(); // 关闭小程序
+    }
+  </script>
+</body>
+</html>
